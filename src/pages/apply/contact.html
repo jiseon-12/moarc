@@ -1,0 +1,25 @@
+<div class="grid gap-4 md:grid-cols-3 mb-10">
+  <div class="box-gray"><span class="ms text-3xl text-moarc-blue" aria-hidden="true">mail</span><p class="font-bold mt-2">이메일</p><p class="text-sm muted">{{CONTACT.email}}</p></div>
+  <div class="box-gray"><span class="ms text-3xl text-moarc-blue" aria-hidden="true">call</span><p class="font-bold mt-2">대표전화</p><p class="text-sm muted">{{CONTACT.tel}}</p></div>
+  <div class="box-gray"><span class="ms text-3xl text-moarc-blue" aria-hidden="true">schedule</span><p class="font-bold mt-2">상담 시간</p><p class="text-sm muted">평일 09:00 ~ 18:00</p></div>
+</div>
+<form data-module="form" data-type="contact" novalidate>
+  <div class="form">
+    <div class="row"><label for="c-name">성명<span class="req">*</span></label><div class="fd"><input id="c-name" name="name" type="text" required maxlength="200"></div></div>
+    <div class="row"><label for="c-org">소속</label><div class="fd"><input id="c-org" name="org" type="text" maxlength="200"></div></div>
+    <div class="row"><div class="lb">연락처<span class="req">*</span></div><div class="fd"><div class="inline"><input name="email" type="email" required placeholder="회신 이메일" aria-label="회신 이메일"><input name="phone" type="tel" placeholder="전화번호 (선택)" aria-label="전화번호"></div></div></div>
+    <div class="row"><label for="c-sub">제목<span class="req">*</span></label><div class="fd"><input id="c-sub" name="subject" type="text" required maxlength="200"></div></div>
+    <div class="row"><label for="c-memo">내용<span class="req">*</span></label><div class="fd"><textarea id="c-memo" name="memo" required maxlength="3000"></textarea></div></div>
+  </div>
+  <div class="consent">
+    <div class="terms" tabindex="0"><strong>개인정보 수집·이용 안내</strong><br>
+    1. 수집 항목: 성명, 소속(기업·기관명), 연락처, 이메일, 신청 내용 및 첨부자료<br>
+    2. 수집 목적: 접수 확인, 선정 심사, 프로그램 운영 안내 및 회신<br>
+    3. 보유 기간: 접수일로부터 1년 (기간 경과 또는 삭제 요청 시 지체 없이 파기)<br>
+    4. 보관 위치: 회사의 Google Workspace(Drive) 계정 — 접근 권한은 담당자로 제한됩니다.<br>
+    5. 동의를 거부할 수 있으나, 이 경우 온라인 접수가 제한됩니다. <a href="/guide/privacy" class="text-moarc-blue font-bold">전문 보기</a></div>
+    <label><input type="checkbox" name="consent" required> [필수] 개인정보 수집·이용에 동의합니다.</label>
+  </div>
+  <div class="hp" aria-hidden="true"><label>홈페이지<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+  <div class="form-actions"><button type="submit" class="btn btn-primary" style="min-width:200px">문의 등록</button></div>
+</form>

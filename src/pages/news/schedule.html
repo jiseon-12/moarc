@@ -1,0 +1,12 @@
+<div data-module="schedule">
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
+    <div class="seg" role="tablist"><button type="button" class="on" data-view="month">월간 달력</button><button type="button" data-view="list">일정 목록</button></div>
+    <p class="text-sm muted" data-sync></p>
+  </div>
+  <div data-pane="month">
+    <div class="cal-head"><button type="button" class="icon-btn" data-prev aria-label="이전 달"><ms>chevron_left</ms></button><strong data-title>----.--</strong><button type="button" class="icon-btn" data-next aria-label="다음 달"><ms>chevron_right</ms></button><button type="button" class="btn btn-line btn-sm" data-today>오늘</button></div>
+    <div class="cal-grid" data-grid></div>
+  </div>
+  <div data-pane="list" hidden><ul class="ev-list" data-list></ul></div>
+</div>
+<p class="muted text-[13px] mt-6">※ 일정을 누르면 상세 정보와 ‘내 Google 캘린더에 추가’ 버튼이 표시됩니다.</p>

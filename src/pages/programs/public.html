@@ -1,0 +1,31 @@
+<p class="lead">지자체 · 공공기관 · 창업지원기관의 위탁 사업을 <strong class="text-moarc-blue">AX 행정 자동화</strong> 기반으로 투명하고 빠르게 수행합니다.</p>
+<div class="grid gap-4 md:grid-cols-3 mt-8">
+  <div class="card"><div class="ico"><ms>campaign</ms></div><h5>특화 IR 포럼</h5><p>1일 집중형 IR 피칭 포럼 및 현장 멘토링 세션</p></div>
+  <div class="card"><div class="ico"><ms>co_present</ms></div><h5>하이브리드형</h5><p>IR 포럼 + 4주 사전 IR 덱 고도화 코칭</p></div>
+  <div class="card"><div class="ico"><ms>trending_up</ms></div><h5>스케일업형</h5><p>8~12주 전담 액셀러레이팅 + 데모데이</p></div>
+</div>
+<h4 class="h4">수행 실적</h4>
+<ul class="dots"><li>전남창조경제혁신센터 협력 해양수산 · 친환경 스타트업 IR 지원</li><li>(재)목포수산식품지원센터 — 제3회 전남해양수산투자 IR 포럼 기업 맞춤형 멘토링 세션 운영 (12개사)</li></ul>
+
+<h4 class="h4" id="simulator">위탁 사업 예산 시뮬레이터</h4>
+<div class="grid gap-6 lg:grid-cols-2" data-module="rfp-sim">
+  <div class="box-gray space-y-5">
+    <div><label class="block text-sm font-bold text-deep-blue mb-2" for="sim-type">1. 프로그램 유형</label>
+      <select id="sim-type" class="w-full h-12 rounded-lg border border-moarc-silver bg-white px-3">
+        <option value="forum" data-base="1000">단발성 특화 IR 포럼 &amp; 현장 멘토링 (1일 집중형)</option>
+        <option value="hybrid" data-base="1600">IR 포럼 + 사전 IR 덱 코칭 (4주 하이브리드형)</option>
+        <option value="scaleup" data-base="2200">종합 스케일업 액셀러레이팅 + 데모데이 (8~12주)</option>
+      </select></div>
+    <div><div class="flex justify-between mb-2"><label class="text-sm font-bold text-deep-blue" for="sim-companies">2. 지원 대상 기업 수</label><b class="num text-moarc-blue" data-out="companies">10개사</b></div><input id="sim-companies" type="range" min="5" max="30" value="10" class="w-full accent-[#1F6BFF]"></div>
+    <div><div class="flex justify-between mb-2"><label class="text-sm font-bold text-deep-blue" for="sim-mentors">3. 심사위원 · 전문 멘토 인원</label><b class="num text-moarc-blue" data-out="mentors">8명</b></div><input id="sim-mentors" type="range" min="4" max="16" value="8" class="w-full accent-[#1F6BFF]"></div>
+  </div>
+  <div class="box-blue flex flex-col">
+    <p class="text-sm text-white/80">예상 위탁 사업 예산 (부가세 포함 · 참고용)</p>
+    <p class="num text-4xl font-extrabold mt-1" data-out="total" aria-live="polite">-</p>
+    <p class="text-xs text-white/70 mt-1" data-out="breakdown"></p>
+    <ul class="mt-5 space-y-2 text-sm text-white/90">
+      <li>✓ 온라인 접수 페이지 · 서류 검증</li><li>✓ 위촉공문 · 안내문 일괄 발송</li><li>✓ 시간대별 멘토링 배정 · 디지털 채점</li><li>✓ 기관 제출 규격 결과보고서 납품</li>
+    </ul>
+    <button type="button" class="btn btn-white mt-auto" style="margin-top:24px" data-sim-apply>이 조건으로 협의 신청 <ms>arrow_forward</ms></button>
+  </div>
+</div>

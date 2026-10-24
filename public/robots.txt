@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /guide/search
+
+Sitemap: https://www.moarc.co.kr/sitemap.xml

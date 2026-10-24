@@ -1,0 +1,132 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "echo \"public/ is prebuilt (npm run build locally)\"",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/company",
+      "destination": "/company/greeting",
+      "permanent": false
+    },
+    {
+      "source": "/business",
+      "destination": "/business/overview",
+      "permanent": false
+    },
+    {
+      "source": "/programs",
+      "destination": "/programs/ir-forum",
+      "permanent": false
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio/companies",
+      "permanent": false
+    },
+    {
+      "source": "/news",
+      "destination": "/news/notice",
+      "permanent": false
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources/library",
+      "permanent": false
+    },
+    {
+      "source": "/apply",
+      "destination": "/apply/startup",
+      "permanent": false
+    },
+    {
+      "source": "/guide",
+      "destination": "/guide/privacy",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/company/greeting",
+      "permanent": true
+    },
+    {
+      "source": "/insight",
+      "destination": "/news/notice",
+      "permanent": true
+    },
+    {
+      "source": "/ax-pipeline",
+      "destination": "/resources/ax-pipeline",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/apply/startup",
+      "permanent": true
+    },
+    {
+      "source": "/workspace",
+      "destination": "/admin",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https://*.googleusercontent.com; connect-src 'self' https://www.googleapis.com; frame-src https://www.google.com https://maps.google.com https://calendar.google.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(styles\\.css|site\\.js|admin\\.js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/data/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
+      "source": "/admin",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ]
+}

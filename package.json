@@ -1,0 +1,19 @@
+{
+  "name": "moarc-portal",
+  "version": "3.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MOARC PARTNERS 공식 포털 — KPAA형 멀티페이지 + Google(Gmail·Drive·Calendar) 연동 관리자 모드",
+  "scripts": {
+    "start": "node scripts/local.mjs",
+    "build": "node scripts/build.mjs && node scripts/preview.mjs",
+    "preview": "node scripts/preview.mjs",
+    "dev": "npx vercel dev"
+  },
+  "devDependencies": {
+    "tailwindcss": "4.3.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
